@@ -1,4 +1,12 @@
 #!/bin/bash
+
+# Question:
+# 5.After renaming and log them in assignment.log , Create a folder named "public_html" in your assignment directory.
+# Place a 'readme.txt' file in there. (It should have the path: ~/public_html/readme.txt.) Set up file permissions
+# to 777 so that you can see the directory listing. 
+# 6. Move first 4 files from assignment folder to public_html folder.
+# 7. Copy the public_html folder inside the public_html and then rename it.
+
 #set -xv
 mkdir public_html test_folder
 # Creating test_folder so as to move four files from there instead of Assignment_3-Shell folder to public_html 

@@ -8,4 +8,6 @@ git checkout -b testing
 git push origin testing
 git checkout -b staging
 git push origin staging
-
+git commit -m "Committing before changing branch" git_commands.txt 
+git checkout master
+git merge staging

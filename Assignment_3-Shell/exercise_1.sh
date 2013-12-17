@@ -24,10 +24,8 @@ text="${text}-----------------------------------------------------------\n"
 text="${text}Current user belongs to the following groups:\n$(groups)\n"
 # 'groups' without arguments shows the groups the current user is in
 text="${text}-----------------------------------------------------------\n"
-text="${text}All files below current directory:\n$(ls -aR ~ 2>&1 | grep -v ^/ | grep -v ^\.$ | grep -v ^\.\.$ | tr -s '\n')\n"
+text="${text}All files below current directory:\n$(ls -aR ~ 2>&1 | grep -Ev '^/|^\.$|^\.\.$' | tr -s '\n')\n"
 # list all files recursively(redirect stderr to stdout), ignore lines starting with '/' and files '.' and '..', then squeeze new lines.
-# Actually just one grep instead of three can suffice using the '|' operator in the regular expression like in other languages
-# but in the shell it is being treated as the pipe operator. I could not find a way to escape it.
 text="${text}-----------------------------------------------------------\n"
 text="${text}File Creation: $(date)\n"
 echo -e "$text" > "assignment-$(date).log"

@@ -1,0 +1,5 @@
+git checkout -b develop
+git add exercise_1.sh  exercise_2+4.sh  exercise_3+4.sh  exercise_5+6+7.sh
+git commit -m "All exercises"
+git push origin develop
+git checkout -b testing
